@@ -2,7 +2,7 @@ package br.com.dio.desafio.dominio;
 
 public class Curso extends Conteudo{
 
-    private static int XP_PADRAO = 0;
+    private static int XP_PADRAO = 10;
 	private int cargaHoraria;
 
     @Override

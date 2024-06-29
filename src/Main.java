@@ -109,5 +109,20 @@ public class Main {
         System.out.println("XP:" + devMaria.calcularTotalXp());
 
         System.out.println("-------");
+
+        // Maria tenta progredir sem estar inscrita em qualquer conteúdo
+        System.out.println("Maria tenta progredir sem estar inscrita em qualquer conteúdo:");
+        devMaria.progredir(); // Deve cair no 'else' e mostrar mensagem de erro.
+
+        // Maria se inscreve e depois conclui todos os conteúdos
+        devMaria.inscreverBootcamp(bootcamp);
+        System.out.println("Maria inscrita e tentando progredir em todos os conteúdos disponíveis:");
+        while (!devMaria.getConteudosInscritos().isEmpty()) {
+            devMaria.progredir();
+        }
+
+        // Maria tenta progredir novamente após concluir todos os conteúdos
+        System.out.println("Maria tenta progredir após concluir todos os conteúdos:");
+        devMaria.progredir(); // Deve cair novamente no 'else' e mostrar mensagem de erro.
     } // Fim do método
 } // Fim da classe
